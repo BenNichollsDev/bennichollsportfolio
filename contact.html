@@ -4,11 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben Nicholls | Software Developer | Contact Me</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ben Nicholls | Software Developer | Contact</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/desktop.css" media="screen and (min-width: 1001px)">
+    <link rel="stylesheet" href="style/mobile.css" media="screen and (max-width: 1000px)">
 </head>
 
-<body>
+<body id="clicked" class="page_contact">
+    <div class="behind_nav_mobile"></div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="project.html">PROJECTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="video_demo.html">VIDEO DEMOS</a></li>
+            <li><a href="site_report.html">SITE REPORT</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="nav_mobile_container">
+        <a class="show_nav_mobile clicked_false" href="#"></a>
+        <a class="show_nav_mobile clicked_true" href="#clicked"></a>
+    </div>
+    <!-- DON'T FORGET TO CHANGE INDEX SO THE DESCRIPTIONS GO INTO MAIN -->
+    <header>
+        <h1>Contact</h1>
+    </header>
+
+    <main>
+        <!-- <p class="main_text">Fill out the contact form below to get in touch with me!</p> -->
+        <form action="mailto:ben.nicholls23@my.northampton.ac.uk" method="get">
+            <label for="contact_first_name">First name:</label>
+            <input type="text" name="contact_first_name" id="contact_first_name" placeholder="Enter your first name" required>
+            
+            <label for="contact_surname">Surname:</label>
+            <input type="text" name="contact_surname" id="contact_surname" placeholder="Enter your surname">
+            
+            <label for="contact_country">Country:</label>
+            <select name="contact_country" id="contact_country">
+                <option value="1" selected>United Kingdom</option>
+                <option value="2">United States of America</option>
+                <option value="3">France</option>
+                <option value="4">Germany</option>
+                <option value="5">Sweden</option>
+            </select>
+
+            <label for="contact_country">Your message:</label>
+            <textarea name="contact_message" id="contact_message" cols="30" rows="10" placeholder="Enter your message here" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+
+    <footer>
+        <span>&copy; 2024 Benjamin Nicholls</span>
+    </footer>
 
 </body>
 
